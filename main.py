@@ -23,7 +23,7 @@ print(nyc.Temperature.describe())
 
 #Predict Jan 2021 temperature
 from scipy import stats
-linear_regression = stats.linregress(x=Date, y=nyc.Temperature)
+linear_regression = stats.linregress(x=nyc.Date, y=nyc.Temperature)
 print(f'Slope - {linear_regression.slope}')
 print(f'Intercept - {linear_regression.intercept}')
 print(f'Prediction for Jan 2021 Max Temperatrure- {linear_regression.slope*2021 +linear_regression.intercept}')
